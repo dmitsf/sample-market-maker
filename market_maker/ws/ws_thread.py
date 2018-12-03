@@ -289,10 +289,10 @@ class BitMEXWebsocket():
         except:
             self.logger.error(traceback.format_exc())
 
-    def __on_open(self):
+    def __on_open(self, ws):
         self.logger.debug("Websocket Opened.")
 
-    def __on_close(self):
+    def __on_close(self, ws):
         self.logger.info('Websocket Closed')
         self.exit()
 
